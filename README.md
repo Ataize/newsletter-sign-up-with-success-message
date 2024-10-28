@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [(https://github.com/Ataize/newsletter-sign-up-with-success-message)]
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [( https://ataize.github.io/newsletter-sign-up-with-success-message/)]
 
 ## My process
 
