@@ -20,20 +20,30 @@ body{
     color: var(--charcoal-grey);
 }
 .card{
-    background-color: var(--white);
+   
+    width: 100%;
+}
+
+.card__banner img, .card__banner picture{
     width: 100%;
 }
 .card__banner img{
-    width: 100%;
+    display: block;
 }
-.card section{
-    width: 100%;
+.card__container, .card__success-msg{
     padding: 1.5rem;
+   
+}
+.card__subscribe{
+    background-color: var(--white);
+    width: 100%;
+    /* padding: 1.5rem; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
 }
+
 .card__title{
     font-size: 2rem;
     color: var(--dark-grey);
@@ -74,19 +84,39 @@ body{
     border: solid 1px var(--grey);
     color: var(--grey);
 }
+.card span{
+    color: var(--tomato);
+    font-weight: 700;
+    font-size: .7rem;
+}
+form div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.error {
+    border: 2px solid var(--tomato);
+    background-color: pink;
+}
+/* .input-email:valid{
+    border: 2px solid greenyellow;
+}
+.input-email:invalid::placeholder{
+    color: var(--tomato);
+} */
 .card button{
     background-color: var(--dark-grey);
     align-self: center;
     color: var(--white);
     border: transparent;
 }
-
-/* Success Message */
-.card__success-msg section{
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
+.card button:hover{
+    cursor: pointer;
+    background-color: var(--tomato);
+    transition: 5ms;
 }
+
 .card__success-msg div{
     margin-top: 4rem;
     height: 50vh;
@@ -100,4 +130,52 @@ body{
 
 .card__success-msg img{
     width: 25%;
+}
+.hidden{
+    display: none;
+}
+
+@media (min-width:700px) {
+    body{
+        background-color:var(--charcoal-grey);
+        display: grid;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+    }
+    /* .card__{
+       display: contents;
+    } */
+    .card__subscribe{
+        /* width: 80%; */
+        border-radius: .6rem;
+        /* align-self: center; */
+        max-width: 700px;
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 1.5rem;
+    }
+    .card__container{
+        width: 100%;
+        padding: 1.5rem;
+    }
+    .card__success-msg section{
+        height: auto;
+    }
+    .card__success-msg div{
+        margin-top: 0;
+    }
+    .card__success-msg{
+        background-color: white;
+        width: 40%;
+        margin: 0 auto;
+        border-radius: .6rem;
+    }
+    .thanks-msg{
+        max-width: 350px;
+    }
+    .hidden{
+        display: none;
+    }
+    
 }

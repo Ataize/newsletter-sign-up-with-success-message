@@ -11,16 +11,18 @@
   
 </head>
 <body>
-  <main class="card">
-    <!-- <div class="card__subscribe">
+  <!-- Add class 'thanks-msg' on 'card' when 'card__subscribe is hidden' -->
+  <main class="card ">
+    <!-- Add or remove 'hidden' -->
+    <div class="card__subscribe" id="subscribe">
 
       <picture class="card__banner">
-        <source media="(max-width: 660px)" srcset=" ./assets/images/illustration-sign-up-mobile.svg"/>
-        <source media="(min-width: 661px)" srcset=" ./assets/images/illustration-sign-up-desktop.svg" />
+        <source media="(max-width: 699px)" srcset=" ./assets/images/illustration-sign-up-mobile.svg"/>
+        <source media="(min-width: 700px)" srcset=" ./assets/images/illustration-sign-up-desktop.svg" />
         <img src="./assets/images/illustration-sign-up-desktop.svg" alt="Grafic Ilustration" />
       </picture>
   
-      <section class="card__section">
+      <section class="card__container">
 
         <h1 class="card__title">Stay updated!</h1>
         <p class="card__description">Join 60,000+ product managers receiving monthly updates on:</p>
@@ -31,21 +33,20 @@
           <li><img src="./assets/images/icon-list.svg" alt="Check Icon">And much more!</li>
         </ul>
         
-        <form action="" method="post">
-          <label for="email">Email address</label>
-          <input type="email" name="email" id="email" placeholder="email@company.com">
-          <span class="error"></span>
-          <button type="submit">Subscribe to monthly newsletter</button>
+        <form action="" method="post" novalidate>
+          <div><label for="email">Email address</label>
+            <span class="error-msg"></span></div>
+          <input type="email" type="email" class="input-email" name="email" id="email" placeholder="email@company.com" required>
+          <button type="submit" id="btn-subscribe">Subscribe to monthly newsletter</button>
       
         </form>  
 
       </section>
 
-    </div> -->
+    </div>
+ <!-- Add or remove 'hidden' -->
+    <div class="card__success-msg hidden" id="success-msg">
 
-    <div class="card__success-msg">
-
-      <!-- Success message start -->
        <section>
         <div>
 
@@ -54,11 +55,10 @@
           <p>A confirmation email has been sent to <strong>ash@loremcompany.com</strong>. 
             Please open it and click the button inside to confirm your subscription.</p>
         </div>
-        <button type="submit"> Dismiss message</button>
+        <button type="submit" id="btn-dismiss"> Dismiss message</button>
       
       </section>
     
-      <!-- Success message end -->
 
     </div>
 
@@ -70,6 +70,7 @@
       Coded by <a href="#">Your Name Here</a>.
     </div> -->
   </main>
+  <script src="main.js"></script>
 
 </body>
 </html>
