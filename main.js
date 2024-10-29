@@ -33,8 +33,10 @@ function validateEmail(email) {
 
 }
 function saveEmail(email) {
+    const spanEmail = document.getElementById('span-email');
     const data = { email: email };
     console.log("Email salvo:", data);
+    spanEmail.innerText = data.email;
 
 }
 
